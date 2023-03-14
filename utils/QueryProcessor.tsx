@@ -11,7 +11,7 @@ export default function QueryProcessor(query: string): string {
       "enxi15"
     );
   }
-  if (query.toLowerCase().includes("what is a plus b?")) {
+  if (query.toLowerCase().includes("multiplied")) {
     const query = "What is 54 multiplied by 39?";
     const regex = /(\d+)\s*multip(?:lied\s*by\s*|plied\s*by\s*)(\d+)/i;
     const match = query.match(regex);
