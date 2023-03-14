@@ -24,6 +24,21 @@ export default function QueryProcessor(query: string): string {
       console.log("Unable to extract numbers from query");
     }
   }
- 
+
+  if (query.toLowerCase().includes("multiplied")) {
+    const regex = /what is (\d+) multiplied by (\d+)\?/i;
+    const match = query.match(regex);
+
+    if (match) {
+      const num1 = parseInt(match[0]);
+      const num2 = parseInt(match[1]);
+      const result = num1 * num2;
+      console.log(result); 
+    } else {
+      console.log("Unable to extract numbers from query");
+    }
+  }
+
+
   return "";
 }
