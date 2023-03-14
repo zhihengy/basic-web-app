@@ -17,4 +17,12 @@ describe("QueryProcessor", () => {
             "writer in the English language and the world's pre-eminent dramatist."
           ));
     });
+
+    test ('What is 83 multiplied by 98?', ()=>{
+        const query = "What is 83 multiplied by 98?";
+        const response: string = QueryProcessor(query);
+        expect(response).toBe((
+            "8134"
+          ));
+    });
 });

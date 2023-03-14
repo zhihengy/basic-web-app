@@ -28,15 +28,17 @@ export default function QueryProcessor(query: string): string {
   if (query.toLowerCase().includes("multiplied")) {
     const regex = /what is (\d+) multiplied by (\d+)\?/i;
     const match = query.match(regex);
-
+    console.log('hi')
     if (match) {
-      const num1 = parseInt(match[0]);
-      const num2 = parseInt(match[1]);
+      const num1 = parseInt(match[1]);
+      const num2 = parseInt(match[2]);
       const result = num1 * num2;
-      console.log(result); 
+      console.log(result)
+      return result.toString()
     } else {
       console.log("Unable to extract numbers from query");
     }
+
   }
 
 
