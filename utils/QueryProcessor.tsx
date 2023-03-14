@@ -12,7 +12,7 @@ export default function QueryProcessor(query: string): string {
     );
   }
   if (query.toLowerCase().includes("multiplied")) {
-    const regex = /(\d+)\s*multip(?:lied\s*by\s*|plied\s*by\s*)(\d+)/i;
+    const regex = /what is (\d+) multiplied by (\d+)\?/i;
     const match = query.match(regex);
 
     if (match) {
